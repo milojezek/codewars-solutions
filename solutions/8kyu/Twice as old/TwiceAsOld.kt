@@ -11,4 +11,5 @@ fun twiceAsOld(dadYearsOld: Int, sonYearsOld: Int): Int {
             son++
         }
     }
+    // Short solution: abs(dadYearsOld - (sonYearsOld * 2))
 }
