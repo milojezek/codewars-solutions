@@ -1,6 +1,10 @@
 import kotlin.math.abs
 
 fun twiceAsOld(dadYearsOld: Int, sonYearsOld: Int): Int {
+    // Short solution: abs(dadYearsOld - (sonYearsOld * 2)) 
+    
+    // | Solution with loop |
+    // V                    V
     var dad = dadYearsOld - sonYearsOld
     var son = 0
     while (true) {
@@ -11,5 +15,4 @@ fun twiceAsOld(dadYearsOld: Int, sonYearsOld: Int): Int {
             son++
         }
     }
-    // Short solution: abs(dadYearsOld - (sonYearsOld * 2))
 }
