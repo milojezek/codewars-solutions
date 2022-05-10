@@ -6,12 +6,10 @@ fun alphabetWar(fight: String): String {
     val rightSideLetterPower = mapOf('m' to 4, 'q' to 3, 'd' to 2, 'z' to 1)
     
     for (letter in fight) {
-        if (letter in leftSideLetterPower.keys) {
-            leftSideScore += leftSideLetterPower.getValue(letter)
-        } else if (letter in rightSideLetterPower.keys) {
-            rightSideScore += rightSideLetterPower.getValue(letter)
-        } else {
-            continue
+        when (letter) {
+        in leftSidePower.keys -> leftSideScore += leftSidePower.getValue(letter)
+        in rightSidePower.keys -> rightSideScore += rightSidePower.getValue(letter)
+        else -> continue
         }
     }
     
